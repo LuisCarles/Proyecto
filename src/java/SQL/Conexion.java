@@ -7,9 +7,9 @@ import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
 public class Conexion {
-    private static String url = "jdbc:mysql://localhost/bd_login";
-    private static String usuario = "";
-    private static String contrasena = "pass";
+    private static String url = "jdbc:mysql://localhost:3306/bd_proyecto";
+    private static String usuario = "root";
+    private static String contrasena = "1234567890";
     
     
     public static Connection conectar(){
@@ -18,7 +18,7 @@ public class Conexion {
         
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/bd_login","root","1234567890");
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/projectDB","root","1234567890");
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Error: " + e);
         }
